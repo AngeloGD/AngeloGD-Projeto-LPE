@@ -152,20 +152,20 @@ int main(void) {
                 // strcpy(carroAtendido[carrosatend].cor,carroFila[carrosatend].cor);
                 carrosatend += 1;
 
-                for (int k = 0; k < contfila; k++) {
-                  carroFila[k] = carroFila[k + 1];
-                }
-                contfila -= 1;
+                // for (int k = 0; k < contfila; k++) {
+                // carroFila[k] = carroFila[k + 1];
+                //}
+                // contfila -= 1;
                 // i -= 1;
                 printf(GRN "Carro abastecido.\n\nReorganizando fila.\n\n" WHT);
                 printf("Não há mais gasolina no tanque\n\n");
                 break;
               case (2):
-                for (int k = 0; k < contfila; k++) {
-                  carroFila[k] = carroFila[k + 1];
-                }
+                // for (int k = 0; k < contfila; k++) {
+                // carroFila[k] = carroFila[k + 1];
+                //}
                 // i -= 1;
-                contfila -= 1;
+                // contfila -= 1;
                 printf("Obrigado pela atenção e volte sempre!\n\n");
                 break;
               default:
@@ -189,11 +189,15 @@ int main(void) {
             carrosatend += 1;
             printf(GRN "Carro abastecido.\n\nReorganizando fila.\n\n" WHT);
             printf("Restam %d litros de combustível.\n\n", tanque);
-            for (int k = 0; k < contfila; k++) {
-              carroFila[k] = carroFila[k + 1];
-            }
-            contfila -= 1;
+            // for (int k = 0; k < contfila; k++) {
+            // carroFila[k] = carroFila[k + 1];
+            //}
+            // contfila -= 1;
           }
+          for (int k = 0; k < contfila; k++) {
+            carroFila[k] = carroFila[k + 1];
+          }
+          contfila -= 1;
         } else {
           printf(RED "Não há carros disponíveis para abastecer!\n\n" WHT);
         }
