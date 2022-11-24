@@ -92,9 +92,9 @@ int main(void) {
     switch (menu) {
     case (1):
       system("clear");
+      printf("[1] Adicionar um carro na fila:\n\n");
       if (tanque != 0) {
         if (contfila < fila) {
-          printf("[1] Adicionar um carro na fila:\n\n");
           printf("Informe o modelo do carro: ");
           setbuf(stdin, NULL);
           fgets(carroFila[contfila].modelo, 20, stdin);
